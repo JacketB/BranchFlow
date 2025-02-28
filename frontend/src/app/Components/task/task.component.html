@@ -1,0 +1,17 @@
+<mat-toolbar class="sticky header">
+  <h1>Задача</h1>
+  <button mat-mini-fab color="primary" (click)="addTask()"><mat-icon>add</mat-icon></button>
+</mat-toolbar>
+
+<div cdkDropListGroup class="group-container">
+  <div class="example-container" *ngFor="let item of allTasks">
+    <h2>{{item.title}}</h2>
+
+    <div cdkDropList [cdkDropListData]="item.list" class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" cdkDrag *ngFor="let task of item.list">
+        <h2>{{task.title}}</h2>
+        <p>{{task.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
