@@ -11,12 +11,14 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {CdkDrag, CdkDropList, CdkDropListGroup} from "@angular/cdk/drag-drop";
 import { TasksListComponent } from './Components/tasks-list/tasks-list.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
-    TasksListComponent
+    TasksListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
